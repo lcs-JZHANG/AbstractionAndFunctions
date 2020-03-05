@@ -32,6 +32,9 @@ func circleParameter(radius:Double) -> Double {
 }
 print("The parameter of the circle is " + String(format:"%.2f",circleParameter(radius:5.0)) )
 
+// Test case #1: radius: 5, result: 10pi = 31.4...
+circleParameter(radius: 5)
+w
 //Parameter of a Trapezoid
 func trapezoidParameter(a:Double,b:Double,c:Double,d:Double) -> Double {
     return a+b+c+d
@@ -74,6 +77,23 @@ func VolumeOfCones(r:Double,h:Double) -> Double {
 }
 print("The volume of the cone is " + String(format:"%.2f",VolumeOfCones(r: 5,h:5)))
 
+// Triangle Perimeter
+func trianglePerimeter(side a: Double,side b: Double,side c: Double) -> Double? {
+    // Properties of triangles
+    
+    guard a > 0, b > 0, c > 0, a+b>c && b+c>a && a+c>b  else {
+        return nil
+    }
+ // Perimeter
+    return a+b+c
+}
+
+// Test case #1: a:15, b:15, c:23, result: 59
+trianglePerimeter(side: 15, side: 15, side: 22)
+// Test case #2: a:7, b:13, c:20 result: nil
+trianglePerimeter(side: 7, side: 13, side: 20)
+// Test case #3: a:-2, b: 5, c:3  result: nil
+trianglePerimeter(side: -9, side: 7, side: 13)
 
 /*:
  [Previous: Writing Documentation](@previous) | Page 7
